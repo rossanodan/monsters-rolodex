@@ -18,6 +18,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>Monsters Rolodex</h1>
         <CardList monsters={this.state.monsters} />
       </div>
     );
