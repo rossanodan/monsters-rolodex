@@ -20,7 +20,7 @@ class App extends Component {
       .then(response => response.json())
       .then(users => this.setState({ monsters: users }));
   }
-  
+
   // arrow function automatically bind the 'this'
   handleSearch = (e) => {
     this.setState({ searchField: e.target.value });
@@ -32,6 +32,7 @@ class App extends Component {
     });
     return (
       <div className="App">
+        <h1>Monsters Rolodex</h1>
         <SearchBox placeholder='Search monsters' handleSearch={this.handleSearch} />
         <CardList monsters={filteredMonsters} />
       </div>
